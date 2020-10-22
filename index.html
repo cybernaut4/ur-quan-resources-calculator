@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ur-Quan Resource Calculator</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<article>
+			<h1>The Ur-Quan Resources Calculator</h1>
+			<hr>
+			<table>
+				<thead>
+					<tr>
+						<th>Type</th>
+						<th>Value</th>
+						<th>Qty</th>
+						<th width="60">Total</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr v-for="row in resCalcTable">
+						<td :class="row.color">{{ row.type }}</td>
+						<td>{{ row.value }}</td>
+						<td><input v-bind:style="{color: row.quantity > 0 ? 'lime' : '', background: row.quantity > 0 ? '#182f44' : ''}" type="number" min="0" value="0" v-model.number="row.quantity" @focus="$event.target.select()" @keyup.escape="row.quantity = 0" @wheel.prevent="wheelNumber($event, $event.deltaY < 0 ? row.quantity++ : row.quantity--)" /></td>
+						<td v-bind:style="{opacity: row.quantity > 0 ? 1 : 0}">{{ row.total = row.quantity * row.value }} RU</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<th colspan="3">Total RU</th>
+						<th>{{ totalRU }} RU</th>
+					</tr>
+				</tfoot>
+			</table>
+			<hr>
+			<button v-on:click="clearAllInput">Clear table</button>
+		</article>
+		<section>
+			<h3>Desktop shortcuts</h3>
+			<ul>
+				<li><kbd>Esc</kbd> resets a single qty to zero. <br><sub>(Only when focused)</sub></li>
+				<li>Use the <b>mouse wheel</b> to change quantities.</li>
+			</ul>
+			<hr>
+			<h3>TODO</h3>
+			<ol>
+				<li>Autofocus on first filler.</li>
+				<li>Focus next filler after pressing <kbd>Enter</kbd>.</li>
+				<li>Prevent mouse wheel from entering negative numbers.</li>
+			</ol>
+		</section>
+	</div>
+
+	<script src="js/app.js"></script>
+</body>
+</html>
