@@ -29,7 +29,7 @@ button {
 }
 
 #app {
-	font-family: "Px437 IBM PS/2thin4";
+	font-family: "Px437 IBM PS/2 thin4";
 	font-size: 16px;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
@@ -106,6 +106,6 @@ ul li {
 }
 
 @font-face {
-	font-family: "Px437 IBM PS/2thin4";
+	font-family: "Px437 IBM PS/2 thin4";
 	src: url("fonts/Px437_IBM_PS2thin4.ttf");
 }
