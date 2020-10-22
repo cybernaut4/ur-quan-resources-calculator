@@ -104,3 +104,8 @@ ul li {
 	margin-bottom: 1em;
 	line-height: .9em;
 }
+
+@font-face {
+	font-family: "Px437 IBM PS/2thin4";
+	src: url("fonts/Px437_IBM_PS2thin4.ttf");
+}
