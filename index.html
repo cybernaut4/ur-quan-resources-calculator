@@ -6,7 +6,8 @@
 	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🚀</text></svg>">
 
 	<meta property="og:title" content="The Ur-Quan Resources Calculator"/>
-	<meta property="og:description" content="Displays how much money you earn from your materials."/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:description" content="Displays how much money you earn from your materials in Star Control 2"/>
 	<meta property="og:url" content="https://arkl1te.github.io/ur-quan-resources-calculator/"/>
 	<title>Ur-Quan Resources Calculator</title>
 	<link rel="stylesheet" href="css/style.css">
@@ -14,8 +15,11 @@
 </head>
 <body>
 	<div id="app">
-		<article>
-			<h1>The Ur-Quan Resources Calculator</h1>
+		<section>
+			<header>
+				<h1>The Ur-Quan Resources Calculator</h1>
+				<h2>For <a href="https://en.wikipedia.org/wiki/Star_Control_II">Star Control 2</a></h2>
+			</header>
 			<hr>
 			<table>
 				<thead>
@@ -43,8 +47,8 @@
 			</table>
 			<hr>
 			<button v-on:click="clearAllInput">Clear table</button>
-		</article>
-		<section>
+		</section>
+		<article>
 			<h3>Desktop shortcuts</h3>
 			<ul>
 				<li><kbd>Esc</kbd> resets a single qty to zero. <br><sub>(Only when focused)</sub></li>
@@ -57,7 +61,7 @@
 				<li>Focus next filler after pressing <kbd>Enter</kbd>.</li>
 				<li>Prevent mouse wheel from entering negative numbers.</li>
 			</ol>
-		</section>
+		</article>
 	</div>
 
 	<script src="js/app.js"></script>

@@ -1,0 +1,133 @@
+$common2: #0b5394;
+$rareEarth2: #6aa84f;
+$baseMetal1: #d9d9d9;
+$baseMetal2: #666666;
+
+$customBlue: #182f44;
+$customGray: #a9a9a9;
+
+.common 		{ color: #cfe2f3; background: $common2; }
+.corrosive 		{ color: #f4cccc; background: #e06666; }
+.baseMetal 		{ color: $baseMetal1; background: $baseMetal2; }
+.nobleGas 		{ color: #c9daf8; background: #1155cc; }
+.rareEarth	 	{ color: #00ff00; background: $rareEarth2; }
+.precious 		{ color: #fbd966; background: #bf9000; }
+.radioactive 	{ color: #ffff00; background: #ff9900; }
+.exotic 		{ color: #e6d1dc; background: #a700b3; }
+
+body {
+	margin: 0;
+	padding: 0.8em;
+	color: #DEDEDE;
+	background: #10171F;
+	display: flex;
+	justify-content: center
+}
+
+button {
+	padding: 0.8em 2em;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: bold;
+	background-color: $baseMetal2;
+	color: inherit;
+	border-color: $customGray;
+}
+
+#app {
+	font-family: "Px437 IBM PS/2 thin4";
+	font-size: 16px;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	zoom: 1;
+	display: flex;
+
+		kbd {
+		background: black;
+		color: #def;
+		padding: 0 .5em;
+		border-radius: 0.5em;
+		border: 1px solid $customBlue;
+		font-family: arial, helvetica, sans-serif;
+		font-weight: bold;
+		font-size: .8em;
+	}
+	table { 
+		border-spacing: 0; 
+
+		td, th {
+			padding: 2px 10px;
+			border: 1px solid transparent;
+			line-height: 1.5em;
+		}
+
+		td:last-child, tfoot th {
+			text-align: right;
+			background: rgba(0,0,0, .5);
+		}
+
+		tfoot { 
+			th:last-child {
+				border-top: 1px dashed #666;
+			}
+			th:first-child {
+				text-align: left;
+			}
+		}
+
+		td:nth-child(2) {
+			text-align: center;
+		}
+
+		input {
+			width: 50px;
+			font-family: inherit;
+			font-size: inherit;
+			background: inherit;
+			color: #789;
+			line-height: 1.5em;
+		}
+	}
+}
+
+article {
+	margin-top: 1em;
+	padding: 1.4em;
+	border: 1px solid $common2;
+	h3 {
+		margin: 0;
+		padding-top: 0;
+	}
+}
+
+header {
+	h2 {
+		font-size: 16px;
+	}
+}
+section {
+	padding: 1em;
+}
+
+hr {
+	margin: 1em 0;
+	border: none;
+	border-bottom: 1px solid $common2;
+}
+
+ul li {
+	margin-bottom: 1em;
+	line-height: .9em;
+}
+
+a {
+	color: $rareEarth2;
+	text-decoration: none;
+	border-bottom: 1px solid $rareEarth2;
+}
+
+
+@font-face {
+	font-family: "Px437 IBM PS/2 thin4";
+	src: url("fonts/Px437_IBM_PS2thin4.ttf");
+}
