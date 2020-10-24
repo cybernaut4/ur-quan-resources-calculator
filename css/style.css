@@ -38,23 +38,25 @@
   background: #a700b3;
 }
 
+* {
+  transition: all 0.1s linear;
+}
+
 body {
   margin: 0;
   padding: 0.8em;
   color: #DEDEDE;
   background: #10171F;
-  display: flex;
-  justify-content: center;
 }
 
 button {
   padding: 0.8em 2em;
   font-family: inherit;
   font-size: inherit;
-  font-weight: bold;
   background-color: #666666;
   color: inherit;
   border-color: #a9a9a9;
+  outline: none;
 }
 
 #app {
@@ -62,15 +64,16 @@ button {
   font-size: 16px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  zoom: 1;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 #app kbd {
-  background: black;
-  color: #def;
+  background: #d9d9d9;
+  color: #182f44;
   padding: 0 0.5em;
-  border-radius: 0.5em;
-  border: 1px solid #182f44;
+  border-radius: 0.2em;
+  border: 2px outset #a9a9a9;
   font-family: arial, helvetica, sans-serif;
   font-weight: bold;
   font-size: 0.8em;
@@ -86,6 +89,10 @@ button {
 #app table td:last-child, #app table tfoot th {
   text-align: right;
   background: rgba(0, 0, 0, 0.5);
+  width: 70%;
+}
+#app table tfoot th {
+  padding-top: 0.4em;
 }
 #app table tfoot th:last-child {
   border-top: 1px dashed #666;
@@ -113,14 +120,23 @@ article {
 article h3 {
   margin: 0;
   padding-top: 0;
+  font-size: 32px;
+  font-weight: normal;
 }
 
+header {
+  padding: 0.01em 1em;
+}
+header h1 {
+  font-size: 32px;
+}
 header h2 {
   font-size: 16px;
 }
 
 section {
-  padding: 1em;
+  padding: 1.4em;
+  width: 360px;
 }
 
 hr {
@@ -138,6 +154,15 @@ a {
   color: #6aa84f;
   text-decoration: none;
   border-bottom: 1px solid #6aa84f;
+}
+a:hover {
+  color: #00ff00;
+  border-bottom-color: #00ff00;
+}
+
+strike {
+  text-decoration-color: #a700b3;
+  text-decoration-style: wavy;
 }
 
 @font-face {

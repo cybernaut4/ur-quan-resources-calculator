@@ -2,6 +2,7 @@ $common2: #0b5394;
 $rareEarth2: #6aa84f;
 $baseMetal1: #d9d9d9;
 $baseMetal2: #666666;
+$exotic2: #a700b3;
 
 $customBlue: #182f44;
 $customGray: #a9a9a9;
@@ -13,25 +14,27 @@ $customGray: #a9a9a9;
 .rareEarth	 	{ color: #00ff00; background: $rareEarth2; }
 .precious 		{ color: #fbd966; background: #bf9000; }
 .radioactive 	{ color: #ffff00; background: #ff9900; }
-.exotic 		{ color: #e6d1dc; background: #a700b3; }
+.exotic 		{ color: #e6d1dc; background: $exotic2; }
+
+* {
+	transition: all .1s linear;
+}
 
 body {
 	margin: 0;
 	padding: 0.8em;
 	color: #DEDEDE;
 	background: #10171F;
-	display: flex;
-	justify-content: center
 }
 
 button {
 	padding: 0.8em 2em;
 	font-family: inherit;
 	font-size: inherit;
-	font-weight: bold;
 	background-color: $baseMetal2;
 	color: inherit;
 	border-color: $customGray;
+	outline: none;
 }
 
 #app {
@@ -39,15 +42,16 @@ button {
 	font-size: 16px;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
-	zoom: 1;
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 
 		kbd {
-		background: black;
-		color: #def;
+		background: $baseMetal1;
+		color: $customBlue;
 		padding: 0 .5em;
-		border-radius: 0.5em;
-		border: 1px solid $customBlue;
+		border-radius: 0.2em;
+		border: 2px outset $customGray;
 		font-family: arial, helvetica, sans-serif;
 		font-weight: bold;
 		font-size: .8em;
@@ -64,14 +68,15 @@ button {
 		td:last-child, tfoot th {
 			text-align: right;
 			background: rgba(0,0,0, .5);
+    		width: 70%;
 		}
 
 		tfoot { 
-			th:last-child {
-				border-top: 1px dashed #666;
-			}
-			th:first-child {
-				text-align: left;
+			th {
+				padding-top: .4em;
+			
+				&:last-child { border-top: 1px dashed #666; }
+				&:first-child { text-align: left; }
 			}
 		}
 
@@ -97,16 +102,19 @@ article {
 	h3 {
 		margin: 0;
 		padding-top: 0;
+		font-size: 32px;
+		font-weight: normal;
 	}
 }
 
 header {
-	h2 {
-		font-size: 16px;
-	}
+	padding: 0.01em 1em;
+	h1 { font-size: 32px; }
+	h2 { font-size: 16px; }
 }
 section {
-	padding: 1em;
+	padding: 1.4em;
+	width: 360px;
 }
 
 hr {
@@ -124,6 +132,16 @@ a {
 	color: $rareEarth2;
 	text-decoration: none;
 	border-bottom: 1px solid $rareEarth2;
+
+	&:hover {
+		color: #00ff00;
+		border-bottom-color: #00ff00;
+	}
+}
+
+strike {
+	text-decoration-color: $exotic2;
+	text-decoration-style: wavy;
 }
 
 
