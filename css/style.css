@@ -124,9 +124,6 @@ article h3 {
   font-weight: normal;
 }
 
-header {
-  padding: 0.01em 1em;
-}
 header h1 {
   font-size: 32px;
 }
@@ -135,8 +132,11 @@ header h2 {
 }
 
 section {
-  padding: 1.4em;
+  padding: 1.4em 1.4em 1.4em 0.4em;
   width: 360px;
+}
+section > *:not(button) {
+  padding: 0.01em 0em;
 }
 
 hr {

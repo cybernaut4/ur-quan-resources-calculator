@@ -108,13 +108,15 @@ article {
 }
 
 header {
-	padding: 0.01em 1em;
 	h1 { font-size: 32px; }
 	h2 { font-size: 16px; }
 }
 section {
-	padding: 1.4em;
+	padding: 1.4em 1.4em 1.4em 0.4em;
 	width: 360px;
+	& > *:not(button) {
+		padding: 0.01em 0em;
+	}
 }
 
 hr {
